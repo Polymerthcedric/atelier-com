@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="atélier.com — Where craftsmanship meets contemporary design. Furniture restoration, interior curation, and bespoke furniture making.">
+    <title>atélier.com — Craftsmanship & Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-ivory: #FAF9F6;
+            --color-stone: #E8E5DF;
+            --color-charcoal: #121212;
+            --color-bronze: #A37344;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+            --spacing-unit: 8px;
+            --max-width: 1400px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-ivory);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography Scale */
+        .display-xl {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            font-weight: 300;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .display-lg {
+            font-family: var(--font-serif);
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        .heading-md {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .body-lg {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .body-sm {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Layout Components */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 calc(var(--spacing-unit) * 4);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: var(--color-ivory);
+            border-bottom: 1px solid var(--color-stone);
+            padding: calc(var(--spacing-unit) * 2.5) 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: var(--color-charcoal);
+            text-decoration: none;
+        }
+
+        .brand-accent {
+            color: var(--color-bronze);
+        }
+
+        .nav-list {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 5);
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--color-charcoal);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--color-bronze);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: calc(var(--spacing-unit) * 20);
+            padding-bottom: calc(var(--spacing-unit) * 12);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-eyebrow {
+            color: var(--color-bronze);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            display: block;
+        }
+
+        .hero-headline {
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .hero-headline em {
+            font-style: italic;
+            color: var(--color-bronze);
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin-bottom: calc(var(--spacing-unit) * 5);
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 2);
+            background-color: var(--color-charcoal);
+            color: var(--color-ivory);
+            padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: 1px solid var(--color-charcoal);
+        }
+
+        .hero-cta:hover {
+            background-color: var(--color-bronze);
+            border-color: var(--color-bronze);
+        }
+
+        .hero-cta-arrow {
+            transition: var(--transition);
+        }
+
+        .hero-cta:hover .hero-cta-arrow {
+            transform: translateX(4px);
+        }
+
+        /* Featured Work Section */
+        .section {
+            padding: calc(var(--spacing-unit) * 10) 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: calc(var(--spacing-unit) * 8);
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .section-eyebrow {
+            color: var(--color-bronze);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            display: block;
+        }
+
+        .section-link {
+            color: var(--color-bronze);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: var(--transition);
+        }
+
+        .section-link:hover {
+            color: var(--color-charcoal);
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        .project-card {
+            background-color: var(--color-ivory);
+            border: 1px solid var(--color-stone);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(18, 18, 18, 0.08);
+        }
+
+        .project-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: var(--color-stone);
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+        }
+
+        .project-content {
+            padding: calc(var(--spacing-unit) * 3);
+        }
+
+        .project-category {
+            color: var(--color-bronze);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            display: block;
+        }
+
+        .project-title {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .project-description {
+            color: rgba(18, 18, 18, 0.7);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: calc(var(--spacing-unit) * 2);
+            border-top: 1px solid var(--color-stone);
+            font-size: 0.8125rem;
+            color: rgba(18, 18, 18, 0.6);
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background-color: var(--color-stone);
+            padding: calc(var(--spacing-unit) * 12) 0;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 8);
+            align-items: start;
+        }
+
+        .philosophy-content {
+            padding-right: calc(var(--spacing-unit) * 4);
+        }
+
+        .philosophy-text {
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .philosophy-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        .stat-item {
+            padding: calc(var(--spacing-unit) * 3) 0;
+            border-top: 2px solid var(--color-bronze);
+        }
+
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--color-bronze);
+            line-height: 1;
+            margin-bottom: calc(var(--spacing-unit) * 1);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        .service-card {
+            padding: calc(var(--spacing-unit) * 4);
+            background-color: var(--color-ivory);
+            border: 1px solid var(--color-stone);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--color-bronze);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            color: var(--color-bronze);
+        }
+
+        .service-title {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .service-description {
+            color: rgba(18, 18, 18, 0.7);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-charcoal);
+            color: var(--color-ivory);
+            padding: calc(var(--spacing-unit) * 10) 0;
+            margin-top: calc(var(--spacing-unit) * 10);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 6);
+            margin-bottom: calc(var(--spacing-unit) * 8);
+        }
+
+        .footer-brand {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .footer-description {
+            color: rgba(250, 249, 246, 0.7);
+            max-width: 400px;
+        }
+
+        .footer-heading {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+        }
+
+        .footer-link a {
+            color: rgba(250, 249, 246, 0.7);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+
+        .footer-link a:hover {
+            color: var(--color-bronze);
+        }
+
+        .footer-bottom {
+            padding-top: calc(var(--spacing-unit) * 6);
+            border-top: 1px solid rgba(250, 249, 246, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 3);
+            font-size: 0.875rem;
+            color: rgba(250, 249, 246, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none;
+            }
+
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: calc(var(--spacing-unit) * 5);
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="brand">atélier<span class="brand-accent">.com</span></a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="body-sm hero-eyebrow">Established Workshop</span>
+                <h1 class="display-xl hero-headline">
+                    Where craftsmanship meets <em>contemporary</em> design
+                </h1>
+                <p class="body-lg hero-description">
+                    We restore, reimagine, and create furniture with intention. Every piece tells a story of precision, heritage, and modern sensibility.
+                </p>
+                <a href="#work" class="hero-cta">
+                    Explore Our Work
+                    <span class="hero-cta-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="section" id="work">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="body-sm section-eyebrow">Selected Projects</span>
+                    <h2 class="display-lg">Featured Work</h2>
+                </div>
+                <a href="#" class="section-link">View All Projects →</a>
+            </div>
+
+            <div class="project-grid">
+                <!-- Mend My Furniture Card -->
+                <article class="project-card">
+                    <div class="project-image" style="background-image: linear-gradient(135deg, var(--color-stone) 0%, #D4D0C8 100%);"></div>
+                    <div class="project-content">
+                        <span class="body-sm project-category">Restoration Service</span>
+                        <h3 class="heading-md project-title">Mend My Furniture</h3>
+                        <p class="body-lg project-description">
+                            Breathe new life into cherished pieces with our expert restoration services.
+                        </p>
+                        <div class="project-meta">
+                            <span>Starting at $450</span>
+                            <span>Learn More →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Bespoke Commission -->
+                <article class="project-card">
+                    <div class="project-image" style="background-image: linear-gradient(135deg, #E8E5DF 0%, #D8D5CE 100%);"></div>
+                    <div class="project-content">
+                        <span class="body-sm project-category">Bespoke Commission</span>
+                        <h3 class="heading-md project-title">The Meridian Collection</h3>
+                        <p class="body-lg project-description">
+                            Custom-designed dining suite featuring hand-joined oak and bronze detailing.
+                        </p>
+                        <div class="project-meta">
+                            <span>2024</span>
+                            <span>View Details →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Interior Curation -->
+                <article class="project-card">
+                    <div class="project-image" style="background-image: linear-gradient(135deg, #E8E5DF 0%, #CFCAC1 100%);"></div>
+                    <div class="project-content">
+                        <span class="body-sm project-category">Interior Curation</span>
+                        <h3 class="heading-md project-title">Brownstone Revival</h3>
+                        <p class="body-lg project-description">
+                            Complete interior restoration of a 1920s Brooklyn brownstone residence.
+                        </p>
+                        <div class="project-meta">
+                            <span>2023</span>
+                            <span>View Details →</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <div class="philosophy-grid">
+                <div class="philosophy-content">
+                    <span class="body-sm section-eyebrow">Our Philosophy</span>
+                    <h2 class="display-lg" style="margin-bottom: calc(var(--spacing-unit) * 4);">
+                        Crafted with intention, built to endure
+                    </h2>
+                    <p class="body-lg philosophy-text">
+                        At atélier.com, we believe that furniture should outlast trends. Our approach combines traditional woodworking techniques with contemporary design thinking, creating pieces that are both timeless and relevant.
+                    </p>
+                    <p class="body-lg philosophy-text">
+                        Every project begins with understanding—your space, your needs, your story. From there, we apply decades of craft knowledge to bring your vision to life with precision and care.
+                    </p>
+                </div>
+                <div class="philosophy-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="body-sm">Years of Craft</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">240</div>
+                        <div class="body-sm">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="body-sm">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="body-sm">Master Artisans</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <span class="body-sm section-eyebrow">What We Do</span>
+                    <h2 class="display-lg">Our Services</h2>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 7l-5 5m0 0l5 5m-5-5h12"/>
+                    </svg>
+                    <h3 class="heading-md service-title">Restoration</h3>
+                    <p class="body-lg service-description">
+                        Expert restoration of antique and vintage furniture, preserving heritage while ensuring longevity.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    <h3 class="heading-md service-title">Bespoke Design</h3>
+                    <p class="body-lg service-description">
+                        Custom furniture designed and built to your specifications, from concept to completion.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                    </svg>
+                    <h3 class="heading-md service-title">Interior Curation</h3>
+                    <p class="body-lg service-description">
+                        Complete interior design services, sourcing and curating furniture and decor for residential and commercial spaces.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    <h3 class="heading-md service-title">Consultation</h3>
+                    <p class="body-lg service-description">
+                        Expert advice on furniture selection, restoration feasibility, and design direction for your project.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">atélier.com</div>
+                    <p class="footer-description">
+                        Where craftsmanship meets contemporary design. Furniture restoration, bespoke commissions, and interior curation since 2009.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Restoration</a></li>
+                        <li class="footer-link"><a href="#">Bespoke Design</a></li>
+                        <li class="footer-link"><a href="#">Interior Curation</a></li>
+                        <li class="footer-link"><a href="#">Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Studio</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">About Us</a></li>
+                        <li class="footer-link"><a href="#">Our Process</a></li>
+                        <li class="footer-link"><a href="#">Journal</a></li>
+                        <li class="footer-link"><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Connect</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="mailto:hello@atélier.com">hello@atélier.com</a></li>
+                        <li class="footer-link"><a href="#">Instagram</a></li>
+                        <li class="footer-link"><a href="#">Pinterest</a></li>
+                        <li class="footer-link"><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 atélier.com. All rights reserved.</p>
+                <p>Brooklyn, New York</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
