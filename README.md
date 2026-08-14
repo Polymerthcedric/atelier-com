@@ -4,7 +4,7 @@ Where craftsmanship meets contemporary design. Furniture restoration, interior c
 
 ## Overview
 
-A production-ready, single-page brand site built with semantic HTML5 and hand-rolled CSS (no frameworks). Delivers a high-end editorial aesthetic with a warm ivory, stone, charcoal, and bronze design system.
+A production-ready, single-page brand site built with semantic HTML5 and hand-rolled CSS (no frameworks). Delivers a high-end editorial aesthetic with a warm ivory, stone, charcoal, and bronze design system. Based in Nairobi, Kenya.
 
 ## Design System
 

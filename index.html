@@ -196,6 +196,20 @@
             transform: translateX(4px);
         }
 
+        .hero-figure {
+            margin-top: calc(var(--spacing-unit) * 8);
+            overflow: hidden;
+            aspect-ratio: 21 / 9;
+            background-color: var(--color-stone);
+        }
+
+        .hero-figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         /* Featured Work Section */
         .section {
             padding: calc(var(--spacing-unit) * 10) 0;
@@ -260,6 +274,13 @@
 
         .project-card:hover .project-image {
             transform: scale(1.02);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .project-content {
@@ -442,6 +463,10 @@
                 display: none;
             }
 
+            .hero-figure {
+                aspect-ratio: 4 / 3;
+            }
+
             .philosophy-grid {
                 grid-template-columns: 1fr;
             }
@@ -477,7 +502,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="body-sm hero-eyebrow">Established Workshop</span>
+                <span class="body-sm hero-eyebrow">Established Workshop — Nairobi, Kenya</span>
                 <h1 class="display-xl hero-headline">
                     Where craftsmanship meets <em>contemporary</em> design
                 </h1>
@@ -489,6 +514,9 @@
                     <span class="hero-cta-arrow">→</span>
                 </a>
             </div>
+            <figure class="hero-figure">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=80" alt="Modern sofa in a warm neutral interior designed by atélier" loading="lazy">
+            </figure>
         </div>
     </section>
 
@@ -506,7 +534,9 @@
             <div class="project-grid">
                 <!-- Mend My Furniture Card -->
                 <article class="project-card">
-                    <div class="project-image" style="background-image: linear-gradient(135deg, var(--color-stone) 0%, #D4D0C8 100%);"></div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80" alt="Artisan restoring a wooden chair in the atélier workshop" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <span class="body-sm project-category">Restoration Service</span>
                         <h3 class="heading-md project-title">Mend My Furniture</h3>
@@ -522,7 +552,9 @@
 
                 <!-- Bespoke Commission -->
                 <article class="project-card">
-                    <div class="project-image" style="background-image: linear-gradient(135deg, #E8E5DF 0%, #D8D5CE 100%);"></div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80" alt="Hand-joined oak dining suite from the Meridian Collection" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <span class="body-sm project-category">Bespoke Commission</span>
                         <h3 class="heading-md project-title">The Meridian Collection</h3>
@@ -538,12 +570,14 @@
 
                 <!-- Interior Curation -->
                 <article class="project-card">
-                    <div class="project-image" style="background-image: linear-gradient(135deg, #E8E5DF 0%, #CFCAC1 100%);"></div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1400&q=80" alt="Curated living room interior at the Karen Residence in Nairobi" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <span class="body-sm project-category">Interior Curation</span>
-                        <h3 class="heading-md project-title">Brownstone Revival</h3>
+                        <h3 class="heading-md project-title">Karen Residence</h3>
                         <p class="body-lg project-description">
-                            Complete interior restoration of a 1920s Brooklyn brownstone residence.
+                            Complete interior restoration of a 1930s Karen bungalow, a Nairobi landmark residence.
                         </p>
                         <div class="project-meta">
                             <span>2023</span>
@@ -654,7 +688,7 @@
                 <div>
                     <div class="footer-brand">atélier.com</div>
                     <p class="footer-description">
-                        Where craftsmanship meets contemporary design. Furniture restoration, bespoke commissions, and interior curation since 2009.
+                        Where craftsmanship meets contemporary design. Furniture restoration, bespoke commissions, and interior curation from our Nairobi studio since 2009.
                     </p>
                 </div>
 
@@ -691,7 +725,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 atélier.com. All rights reserved.</p>
-                <p>Brooklyn, New York</p>
+                <p>Nairobi, Kenya</p>
             </div>
         </div>
     </footer>
