@@ -1,29 +1,9 @@
-# atélier.com — Craftsmanship & Design
+# Atelier
 
-Where craftsmanship meets contemporary design. Furniture restoration, interior curation, and bespoke furniture making.
+Furniture isn't meant to be hidden behind bloated JavaScript frameworks. Atelier is an editorial brand site for a Nairobi furniture craftsmanship studio, built with raw HTML and CSS. No virtual DOMs, no client-side hydration, just perfectly aligned pixels and instantaneous paint times.
 
-## Overview
+## The Stance
+We've forgotten how to build the web. The modern web is plagued by gigabytes of node_modules just to display a picture of a chair. This project rejects that. It is minimal, fast, and permanent.
 
-A production-ready, single-page brand site built with semantic HTML5 and hand-rolled CSS (no frameworks). Delivers a high-end editorial aesthetic with a warm ivory, stone, charcoal, and bronze design system. Based in Nairobi, Kenya.
-
-## Design System
-
-- Primary Background: `#FAF9F6` (warm ivory)
-- Secondary Surface: `#E8E5DF` (warm stone)
-- Primary Text: `#121212` (rich charcoal)
-- Accent: `#A37344` (bronze/ochre)
-- Typography: Cormorant Garamond (serif) + Inter (sans-serif)
-- Consistent 8px spacing unit, fluid `clamp()` type scale
-
-## Sections
-
-- Header (fixed, backdrop blur)
-- Hero (editorial typography + CTA)
-- Featured Work (project grid)
-- Philosophy (approach + stats)
-- Services (restoration, bespoke, curation, consultation)
-- Footer
-
-## Deploy
-
-Static site — deployable to GitHub Pages, Netlify, or Vercel with no build step. Simply serve the `index.html`.
+## Usage
+Open `index.html`. That's it. No build step. No fragile dependencies.
