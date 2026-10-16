@@ -1,9 +1,7 @@
-# Atelier
+# Atélier
 
-Furniture isn't meant to be hidden behind bloated JavaScript frameworks. Atelier is an editorial brand site for a Nairobi furniture craftsmanship studio, built with raw HTML and CSS. No virtual DOMs, no client-side hydration, just perfectly aligned pixels and instantaneous paint times.
+A static website concept for a furniture-restoration and interiors studio. The page uses HTML and CSS, with a small amount of JavaScript for the menu and interactions.
 
-## The Stance
-We've forgotten how to build the web. The modern web is plagued by gigabytes of node_modules just to display a picture of a chair. This project rejects that. It is minimal, fast, and permanent.
+## View it locally
 
-## Usage
-Open `index.html`. That's it. No build step. No fragile dependencies.
+Open `index.html` in a browser. There is no build step.
