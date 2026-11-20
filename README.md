@@ -1,7 +1,11 @@
 # Atélier
 
-A static website concept for a furniture-restoration and interiors studio. The page uses HTML and CSS, with a small amount of JavaScript for the menu and interactions.
+A static website concept for a furniture-restoration and interiors studio. The page uses only HTML and CSS; there is no JavaScript and no build step.
 
 ## View it locally
 
-Open `index.html` in a browser. There is no build step.
+Open `index.html` in a browser. Some footer items are concept placeholders and are intentionally not linked.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
